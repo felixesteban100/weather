@@ -3,92 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/648/648198.png" type="image/icon type">
+    <title>Weather app</title>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
   </head>
   <body class="blurred">
-    <div class="location-container">
-        <img src="https://cdn-icons-png.flaticon.com/512/149/149060.png"  class="location-logo">
-        <span>You are here:&nbsp;</span>
-        <span data-location> </span>
+    <div class="top-part">
+      <div class="location-container">
+          <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png"  class="location-logo">
+          <!-- <span>You are here:&nbsp;</span> -->
+          <span data-location>51 Garfield Avenue, Easthampton, MA, United States of America</span>
+      </div>
+      <div class="time-container">
+          <img src="https://cdn-icons-png.flaticon.com/512/850/850960.png"  class="time-logo">
+          <!-- <span>You are here:&nbsp;</span> -->
+          <span data-time>05:31:24 PM</span>
+      </div>
+      <div class="date-container">
+          <img src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png"  class="date-logo">
+          <!-- <span>You are here:&nbsp;</span> -->
+          <span data-date>Friday, December 30, 2022</span>
+      </div>
+
+      <header class="header">
+        <div class="header-left">
+          <img class="weather-icon large" src="icons/sun.svg" alt="" data-current-icon>
+          <div class="header-current-temp">
+            <span data-current-temp>31</span>&deg;
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="info-group">
+            <div class="label">High</div>
+            <div><span data-current-high>32</span>&deg;</div>
+          </div>
+          <div class="info-group">
+            <div class="label">FL High</div>
+            <div><span data-current-fl-high>27</span>&deg;</div>
+          </div>
+          <div class="info-group">
+            <div class="label">Wind</div>
+            <div><span data-current-wind>9</span><span class="value-sub-info">mph</span></div>
+          </div>
+          <div class="info-group">
+            <div class="label">Low</div>
+            <div><span data-current-low>19</span>&deg;</div>
+          </div>
+          <div class="info-group">
+            <div class="label">FL Low</div>
+            <div><span data-current-fl-low>12</span>&deg;</div>
+          </div>
+          <div class="info-group">
+            <div class="label">Precip</div>
+            <div><span data-current-precip>0.1</span><span class="value-sub-info">in</span></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="day-section" data-day-section>
+        <div class="day-card">
+          <img src="icons/cloud.svg" class="weather-icon">
+          <div class="day-card-date">Monday</div>
+          <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+          <img src="icons/cloud.svg" class="weather-icon">
+          <div class="day-card-date">Monday</div>
+          <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+          <img src="icons/cloud.svg" class="weather-icon">
+          <div class="day-card-date">Tuesday</div>
+          <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+          <img src="icons/cloud.svg" class="weather-icon">
+          <div class="day-card-date">Wednesday</div>
+          <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+          <img src="icons/cloud.svg" class="weather-icon">
+          <div class="day-card-date">Thursday</div>
+          <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+          <img src="icons/cloud.svg" class="weather-icon">
+          <div class="day-card-date">Friday</div>
+          <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+          <img src="icons/cloud.svg" class="weather-icon">
+          <div class="day-card-date">Saturday</div>
+          <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+          <img src="icons/cloud.svg" class="weather-icon">
+          <div class="day-card-date">Sunday</div>
+          <div>32&deg;</div>
+        </div>
+      </section>
     </div>
-
-    <header class="header">
-      <div class="header-left">
-        <img class="weather-icon large" src="icons/sun.svg" alt="" data-current-icon>
-        <div class="header-current-temp">
-          <span data-current-temp>31</span>&deg;
-        </div>
-      </div>
-      <div class="header-right">
-        <div class="info-group">
-          <div class="label">High</div>
-          <div><span data-current-high>32</span>&deg;</div>
-        </div>
-        <div class="info-group">
-          <div class="label">FL High</div>
-          <div><span data-current-fl-high>27</span>&deg;</div>
-        </div>
-        <div class="info-group">
-          <div class="label">Wind</div>
-          <div><span data-current-wind>9</span><span class="value-sub-info">mph</span></div>
-        </div>
-        <div class="info-group">
-          <div class="label">Low</div>
-          <div><span data-current-low>19</span>&deg;</div>
-        </div>
-        <div class="info-group">
-          <div class="label">FL Low</div>
-          <div><span data-current-fl-low>12</span>&deg;</div>
-        </div>
-        <div class="info-group">
-          <div class="label">Precip</div>
-          <div><span data-current-precip>0.1</span><span class="value-sub-info">in</span></div>
-        </div>
-      </div>
-    </header>
-
-    <section class="day-section" data-day-section>
-      <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
-        <div class="day-card-date">Monday</div>
-        <div>32&deg;</div>
-      </div>
-      <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
-        <div class="day-card-date">Monday</div>
-        <div>32&deg;</div>
-      </div>
-      <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
-        <div class="day-card-date">Tuesday</div>
-        <div>32&deg;</div>
-      </div>
-      <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
-        <div class="day-card-date">Wednesday</div>
-        <div>32&deg;</div>
-      </div>
-      <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
-        <div class="day-card-date">Thursday</div>
-        <div>32&deg;</div>
-      </div>
-      <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
-        <div class="day-card-date">Friday</div>
-        <div>32&deg;</div>
-      </div>
-      <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
-        <div class="day-card-date">Saturday</div>
-        <div>32&deg;</div>
-      </div>
-      <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
-        <div class="day-card-date">Sunday</div>
-        <div>32&deg;</div>
-      </div>
-    </section>
+    
 
     <table class="hour-section">
       <tbody data-hour-section>

@@ -15,6 +15,9 @@
 
   --body-background: hsl(243, 89%, 22%);
   --body-background-2: hsl(243, 39%, 51%);
+
+  --filter: rgba(0, 0, 0, 0.55);
+  
   --color-text: hsl(0, 0%, 100%);
   --border-header-left: hsl(182, 100%, 41%);
   --label-color: hsl(160, 100%, 50%);
@@ -26,17 +29,14 @@
 
 body{
   margin: 0;
-  background: linear-gradient(0.25turn, var(--body-background), var(--body-background-2));
+  /* background: linear-gradient(0.25turn, hsl(73, 16%, 11%), hsl(0, 5%, 12%), hsl(62, 42%, 15%)); */
   
   /* images */
-  /* background-image: url('https://thumbs.gfycat.com/BrownIllegalChafer-size_restricted.gif'); */
-  /* background-image: url('https://media1.popsugar-assets.com/files/thumbor/XdZCH91AHCuEdnfsfTlsf1PjX7U/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2019/07/12/789/n/1922441/f9cc294c34316a54_GettyImages-941097280/i/sunny-day.jpg'); */
+  /* background: url('https://images.pexels.com/photos/1114690/pexels-photo-1114690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
   /* images */
-
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto;
   color: var(--color-text);
-  font-family: sans-serif;
 }
 
 .blurred {
@@ -44,14 +44,42 @@ body{
   overflow: hidden;
 }
 
+.top-part{
+  background: var(--filter);
+}
+
 .location-container{
-  margin: 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
 .location-logo{
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.date-container{
+  padding: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.date-logo{
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.time-container{
+  padding: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.time-logo{
   height: 1.5rem;
   margin-right: 0.5rem;
 }

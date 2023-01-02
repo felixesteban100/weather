@@ -39,7 +39,7 @@ function parseCurrentWeather({current_weather, daily}) {
     
     return {
         currentTemp: Math.round(currentTemp),
-        hightTemp: Math.round(maxTemp),
+        highTemp: Math.round(maxTemp),
         lowTemp: Math.round(minTemp),
         highFeelsLike: Math.round(maxFeelsLikeTemp),
         lowFeelsLike: Math.round(minFeelsLikeTemp),
@@ -60,6 +60,8 @@ function parseDailyWeather({daily}){
 }
 
 function parseHourlyWeather({hourly, current_weather}){
+    // console.log(hourly)
+    
     return hourly.time
         .map((time, index) => {
             return {
