@@ -29,6 +29,7 @@
 
 body{
   margin: 0;
+  background: linear-gradient(0.25turn, var(--body-background), var(--body-background-2));
   /* background: linear-gradient(0.25turn, hsl(73, 16%, 11%), hsl(0, 5%, 12%), hsl(62, 42%, 15%)); */
   
   /* images */

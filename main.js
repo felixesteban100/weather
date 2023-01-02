@@ -151,26 +151,40 @@ function changeBackground(weatherCode){
   let chosenBackground = ''
 
   const hour = new Date().getHours()
-  const month = new Date().getMonth()
+
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const date = new Date()
+  const month = monthNames[date.getMonth()]
+
+  console.log(month)
 
   let currentDayBySeason
+
   switch(month){
-    case 2 || 3 || 4:
+    case "March":
+    case "April":
+    case "May":
       const springDay = hour > 8 && hour < 19
       currentDayBySeason = springDay
     break;
 
-    case 5 || 6 || 7:
+    case "June": 
+    case "July":
+    case "August":
       const summerDay = hour > 8 && hour < 21
       currentDayBySeason = summerDay
     break;
 
-    case 8 || 9 || 10:
+    case "September":
+    case "October": 
+    case "November":
       const fallDay = hour > 8 && hour < 17
       currentDayBySeason = fallDay
     break;
 
-    case 11 || 0 || 1:
+    case "December":
+    case "January":
+    case "February":
       const winterDay = hour > 8 && hour < 16
       currentDayBySeason = winterDay
     break;
@@ -181,26 +195,30 @@ function changeBackground(weatherCode){
 
   switch(weatherCode){
     case "sun":
-      if (currentDayBySeason) {
+      if (currentDayBySeason === true) {
         chosenBackground = "https://images.pexels.com/photos/301599/pexels-photo-301599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       // chosenBackground = "linear-gradient(0.25turn, hsl(58, 47%, 43%), hsl(31, 100%, 50%), hsl(52, 100%, 50%))"
-      }else{
+      }else if (currentDayBySeason === false) {
         chosenBackground = "https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       }
     break;
 
     case "cloud-sun":
-      if (currentDayBySeason) {
+      if (currentDayBySeason === true) {
         chosenBackground = "https://images.pexels.com/photos/417045/pexels-photo-417045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         // chosenBackground = "linear-gradient(0.25turn, hsl(180, 47%, 43%), hsl(208, 100%, 50%), hsl(52, 100%, 50%))"
-      }else{
+      }else if (currentDayBySeason === false) {
         chosenBackground = "https://images.pexels.com/photos/416920/pexels-photo-416920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       }
     break;
 
     case "cloud":
-      chosenBackground = "https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      if (currentDayBySeason === true) {
+        chosenBackground = "https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       // chosenBackground = "linear-gradient(0.25turn, hsl(243, 89%, 22%), hsl(243, 39%, 51%))"
+      }else if (currentDayBySeason === false) {
+        chosenBackground = "https://images.pexels.com/photos/416920/pexels-photo-416920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      }
     break;
 
     case "smog":
@@ -228,9 +246,11 @@ function changeBackground(weatherCode){
   }
   
 
-  document.body.style.background = `url(${chosenBackground})`;
-  document.body.style.backgroundSize = "cover"
-  document.body.style.backgroundPosition = "center center"
-  document.body.style.backgroundAttachment = "fixed"
-  document.body.style.backgroundRepeat = "no-repeat"
+  if (chosenBackground !== '') {
+    document.body.style.background = `url(${chosenBackground})`;
+    document.body.style.backgroundSize = "cover"
+    document.body.style.backgroundPosition = "center center"
+    document.body.style.backgroundAttachment = "fixed"
+    document.body.style.backgroundRepeat = "no-repeat"
+  }
 }
