@@ -23,12 +23,14 @@
   --label-color: hsl(160, 100%, 50%);
   --day-card-border: hsl(160, 100%, 50%);
   --day-card-date-color: hsl(160, 100%, 50%);
-  --hour-row-background: hsl(236, 90%, 12%);
-  --hour-row-2-background: hsl(230, 88%, 20%);
+  /* --hour-row-background: hsl(236, 90%, 12%); */
+  --hour-row-background: hsl(178, 90%, 12%);
+  /* --hour-row-2-background: hsl(230, 88%, 20%); */
+  --hour-row-2-background: hsl(173, 88%, 20%);
 }
 
 body{
-  margin: 0;
+  margin: 0;  
   background: linear-gradient(0.25turn, var(--body-background), var(--body-background-2));
   /* background: linear-gradient(0.25turn, hsl(73, 16%, 11%), hsl(0, 5%, 12%), hsl(62, 42%, 15%)); */
   
