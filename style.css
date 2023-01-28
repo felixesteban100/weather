@@ -19,14 +19,14 @@
   --filter: rgba(0, 0, 0, 0.55);
   
   --color-text: hsl(0, 0%, 100%);
-  --border-header-left: hsl(182, 100%, 41%);
-  --label-color: hsl(160, 100%, 50%);
-  --day-card-border: hsl(160, 100%, 50%);
-  --day-card-date-color: hsl(160, 100%, 50%);
+  --border-header-left: hsl(243, 89%, 22%);
+  --label-color: hsl(186, 73%, 45%);
+  --day-card-border: hsl(240, 39%, 51%);
+  --day-card-date-color: hsl(186, 39%, 51%);
   /* --hour-row-background: hsl(236, 90%, 12%); */
-  --hour-row-background: hsl(178, 90%, 12%);
+  --hour-row-background: hsl(243, 89%, 22%);
   /* --hour-row-2-background: hsl(230, 88%, 20%); */
-  --hour-row-2-background: hsl(173, 88%, 20%);
+  --hour-row-2-background: hsl(243, 39%, 51%);
 }
 
 body{
