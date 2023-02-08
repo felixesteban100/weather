@@ -167,28 +167,28 @@ function changeBackground(weatherCode) {
     case "March":
     case "April":
     case "May":
-      const springDay = hour > 8 && hour < 19
+      const springDay = hour > 7 && hour < 19
       currentDayBySeason = springDay
       break;
 
     case "June":
     case "July":
     case "August":
-      const summerDay = hour > 8 && hour < 21
+      const summerDay = hour > 7 && hour < 21
       currentDayBySeason = summerDay
       break;
 
     case "September":
     case "October":
     case "November":
-      const fallDay = hour > 8 && hour < 17
+      const fallDay = hour > 7 && hour < 17
       currentDayBySeason = fallDay
       break;
 
     case "December":
     case "January":
     case "February":
-      const winterDay = hour > 8 && hour < 16
+      const winterDay = hour > 7 && hour < 16
       currentDayBySeason = winterDay
       break;
 
