@@ -199,14 +199,15 @@ function changeBackground(weatherCode) {
   switch (weatherCode) {
     case "sun":
       if (currentDayBySeason === true) {
-        chosenBackground = "https://images.pexels.com/photos/301599/pexels-photo-301599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        chosenBackground = "https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=612x612&w=0&k=20&c=MGd2-v42lNF7Ie6TtsYoKnohdCfOPFSPQt5XOz4uOy4="
+        // chosenBackground = "https://images.pexels.com/photos/301599/pexels-photo-301599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         // chosenBackground = "linear-gradient(0.25turn, hsl(58, 47%, 43%), hsl(31, 100%, 50%), hsl(52, 100%, 50%))"
-        bg_firstRow = "hsl(62, 63%, 24%)"
-        bg_secondRow = "hsl(62, 54%, 21%)"
-        labelColor = "hsl(109, 83%, 69%)"
-        dayCardDateColor = "hsl(109, 83%, 69%)"
-        dayCardBorderColor = "hsl(109, 83%, 69%)" 
-        headerLeftBorderColor = "hsl(109, 83%, 69%)"
+        bg_firstRow = "hsl(243, 100%, 68%)"
+        bg_secondRow = "hsl(220, 96%, 32%)"
+        labelColor = "hsl(62, 100%, 89%)"
+        dayCardDateColor = "hsl(62, 100%, 89%)"
+        dayCardBorderColor = "hsl(62, 100%, 89%)" 
+        headerLeftBorderColor = "hsl(62, 100%, 89%)"
 
       } else if (currentDayBySeason === false) {
         chosenBackground = "https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -344,5 +345,4 @@ function changeBackground(weatherCode) {
   })
 
   document.querySelector('.header-left').style.borderColor = headerLeftBorderColor
-  
 }
